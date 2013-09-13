@@ -4,4 +4,7 @@ Pretty basic Dockerfile syntax highlighting for Sublime Text (2?).
 
 PR's with syntax updates, suggestions, packaging etc. are all very much appreciated!
 
+[Gitshot](https://coderwall.com/p/xlatfq)
+![screenshot](gitshot.png)
+
 enjoy.
