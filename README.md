@@ -1,8 +1,17 @@
 # Dockerfile.tmLanguage
 
-Pretty basic Dockerfile syntax highlighting for Sublime Text (2?).
+Dockerfile syntaxt highlighting for TextMate and Sublime Text.
 
-PR's with syntax updates, suggestions, packaging etc. are all very much appreciated!
+## Install
+
+### Sublime Text
+
+Available for Sublime Text under [package control](https://sublime.wbond.net/packages/Dockerfile%20Syntax%20Highlighting).  
+Search for *Dockerfile Syntax Highlighting*
+
+### TextMate
+
+*...unknown. Probably put it somewhere smart.*
 
 enjoy.
 
