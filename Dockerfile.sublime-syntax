@@ -1,0 +1,33 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: Dockerfile
+file_extensions:
+  - Dockerfile
+scope: source.dockerfile
+contexts:
+  main:
+    - match: ^\s*(ONBUILD\s+)?(FROM|MAINTAINER|RUN|EXPOSE|ENV|ADD|VOLUME|USER|WORKDIR|COPY)\s
+      captures:
+        0: keyword.control.dockerfile
+        1: keyword.other.special-method.dockerfile
+    - match: ^\s*(ONBUILD\s+)?(CMD|ENTRYPOINT)\s
+      captures:
+        0: keyword.operator.dockerfile
+        1: keyword.other.special-method.dockerfile
+    - match: '"'
+      push:
+        - meta_scope: string.quoted.double.dockerfile
+        - match: '"'
+          pop: true
+        - match: \\.
+          scope: constant.character.escaped.dockerfile
+    - match: "'"
+      push:
+        - meta_scope: string.quoted.single.dockerfile
+        - match: "'"
+          pop: true
+        - match: \\.
+          scope: constant.character.escaped.dockerfile
+    - match: ^\s*#.*$
+      scope: comment.block.dockerfile
