@@ -7,7 +7,7 @@ file_extensions:
 scope: source.dockerfile
 contexts:
   main:
-    - match: ^\s*(ONBUILD\s+)?(FROM|MAINTAINER|RUN|EXPOSE|ENV|ADD|VOLUME|USER|WORKDIR|COPY)\s
+    - match: ^\s*(ONBUILD\s+)?(FROM|MAINTAINER|RUN|EXPOSE|ENV|ADD|VOLUME|USER|WORKDIR|COPY|LABEL)\s
       captures:
         0: keyword.control.dockerfile
         1: keyword.other.special-method.dockerfile
